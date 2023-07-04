@@ -1,0 +1,23 @@
+seed: 0
+hdim: 10000
+hdim_per_conv: 10
+layer_steps: 500
+step_size: 1.0
+n_batched_particles: 550000
+n_offline_particles: 4000
+forward: sorting
+inverse: sorting
+downsample: lanczos5
+dequantize: True
+pyramidal: True
+basedir: output
+expname: cifar10_class_cond
+dataset: cifar10
+n_viz: 400
+viz_every: 200
+restore_path:
+cond: True
+cond_type: class
+amplifier: 10.0
+init_std: 0.1
+baseline: False

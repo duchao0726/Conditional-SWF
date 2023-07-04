@@ -1,0 +1,22 @@
+seed: 0
+hdim: 10000
+hdim_per_conv: 10
+layer_steps: 300
+step_size: 1.0
+n_batched_particles: 450000
+n_offline_particles: 4000
+forward: rqspline
+n_bins_particles: 1000
+inverse: sorting
+downsample: lanczos5
+dequantize: True
+pyramidal: True
+basedir: output
+expname: celeba_uncond_rqspline
+dataset: celeba
+n_viz: 400
+viz_every: 200
+restore_path:
+cond: False
+init_std: 0.1
+baseline: False
