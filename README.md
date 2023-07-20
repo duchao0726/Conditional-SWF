@@ -23,6 +23,25 @@ The configuration files for all experiments can be found in the `config` folder.
 python main.py -c configs/mnist_class_cond.yaml
 ```
 
+## Online Generative Modeling (Experimental)
+Our method relies on the CDF functions of the projected target data distributions, which we estimate using empirical distributions represented as sorted arrays. The advantage of sorted arrays, besides being nonparametric, lies in their efficient updating capability, achieved in $\mathcal{O}(\log N)$ time as new data is observed. This unique attribute makes our method potentially adaptable for online generative modeling. Here we present two preliminary demonstrations.
+
+**Online _Unconditional_ Generative Modeling**
+
+In the unconditional setting, we assume sequential observation of data class by class, starting from the first class of MNIST (digit '0') to the tenth class (digit '9'), followed by Fashion-MNIST classes from the first to the tenth. The CDF functions of the projected target data distributions are continuously updated as new data arrives, leading to dynamic changes in the _batched samples_ (i.e., run Algorithm 1 with latest CDF functions), as shown below.
+
+<div align="center">
+  <img src="./assets/online_uncond.gif"/>
+</div>
+
+**Online _Conditional_ Generative Modeling**
+
+In the class-conditional setting, we begin with fully observed MNIST and proceed with sequential observation of Fashion-MNIST data class by class, starting from the first class (T-shirt/top) to the tenth class (Ankle boot). The resulting dynamic changes in class-conditional _batched samples_ are illustrated below.
+
+<div align="center">
+  <img src="./assets/online_class_cond.gif"/>
+</div>
+
 ## Citation
 If you find this project helpful in your research, please consider citing our paper:
   ```
