@@ -28,7 +28,7 @@ Our method relies on the CDF functions of the projected target data distribution
 
 **Online _Unconditional_ Generative Modeling**
 
-In the unconditional setting, we assume sequential observation of data class by class, starting from the first class of MNIST (digit '0') to the tenth class (digit '9'), followed by Fashion-MNIST classes from the first to the tenth. The CDF functions of the projected target data distributions are continuously updated as new data arrives, leading to dynamic changes in the _batched samples_ (i.e., run Algorithm 1 with latest CDF functions), as shown below.
+In the unconditional setting, we assume sequential observation of data class by class, starting from the first class of MNIST (digit '0') to the tenth class (digit '9'), followed by Fashion-MNIST classes from the first to the tenth. The CDF functions of the projected target data distributions are continuously updated as new data arrives, leading to dynamic changes in the _batched samples_ (i.e., run Algorithm 1 with the latest CDF functions), as shown below.
 
 <div align="center">
   <img src="./assets/online_uncond.gif"/>
